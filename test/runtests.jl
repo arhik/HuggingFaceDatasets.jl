@@ -12,6 +12,10 @@ end
     include("datasetdict.jl")
 end
 
+@testset "iterable_dataset" begin
+    include("iterable_dataset.jl")
+end
+
 if !parse(Bool, get(ENV, "CI", "false"))
     @info "Testing larger datasets"
     @testset "larger datasets" begin

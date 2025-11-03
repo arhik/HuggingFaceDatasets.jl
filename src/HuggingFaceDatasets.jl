@@ -18,19 +18,23 @@ include("observation.jl")
 include("callable.jl")
 
 include("dataset.jl")
-export Dataset, 
+export Dataset,
     with_jltransform,
-    set_jltransform!, 
-    with_format, 
+    set_jltransform!,
+    with_format,
     set_format!,
     reset_format!
+
+include("iterable_dataset.jl")
+export IterableDataset,
+    take, skip, shuffle, batch, shard
 
 include("datasetdict.jl")
 export DatasetDict
 
 include("transforms.jl")
-export py2jl, 
-    jl2numpy, 
+export py2jl,
+    jl2numpy,
     numpy2jl
 
 include("load_dataset.jl")
